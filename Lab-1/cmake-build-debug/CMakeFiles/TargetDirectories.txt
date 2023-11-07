@@ -1,4 +1,6 @@
-/Users/rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/part1.dir
-/Users/rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/part2.dir
-/Users/rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/part1.dir
+/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/part2.dir
+/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/part2_receiver.dir
+/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/part2_sender.dir
+/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

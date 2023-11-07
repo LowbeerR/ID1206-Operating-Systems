@@ -65,6 +65,8 @@ CMAKE_BINARY_DIR = /home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cm
 # The main recursive "all" target.
 all: CMakeFiles/part1.dir/all
 all: CMakeFiles/part2.dir/all
+all: CMakeFiles/part2_receiver.dir/all
+all: CMakeFiles/part2_sender.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +76,8 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/part1.dir/clean
 clean: CMakeFiles/part2.dir/clean
+clean: CMakeFiles/part2_receiver.dir/clean
+clean: CMakeFiles/part2_sender.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -127,6 +131,58 @@ part2: CMakeFiles/part2.dir/rule
 CMakeFiles/part2.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/clean
 .PHONY : CMakeFiles/part2.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/part2_receiver.dir
+
+# All Build rule for target.
+CMakeFiles/part2_receiver.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target part2_receiver"
+.PHONY : CMakeFiles/part2_receiver.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/part2_receiver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/part2_receiver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/part2_receiver.dir/rule
+
+# Convenience name for target.
+part2_receiver: CMakeFiles/part2_receiver.dir/rule
+.PHONY : part2_receiver
+
+# clean rule for target.
+CMakeFiles/part2_receiver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/clean
+.PHONY : CMakeFiles/part2_receiver.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/part2_sender.dir
+
+# All Build rule for target.
+CMakeFiles/part2_sender.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target part2_sender"
+.PHONY : CMakeFiles/part2_sender.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/part2_sender.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/part2_sender.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Documents/GitHub/ID1206-Operating-Systems/Lab-1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/part2_sender.dir/rule
+
+# Convenience name for target.
+part2_sender: CMakeFiles/part2_sender.dir/rule
+.PHONY : part2_sender
+
+# clean rule for target.
+CMakeFiles/part2_sender.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/clean
+.PHONY : CMakeFiles/part2_sender.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

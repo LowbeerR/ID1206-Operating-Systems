@@ -142,6 +142,32 @@ part2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/build
 .PHONY : part2/fast
 
+#=============================================================================
+# Target rules for targets named part2_receiver
+
+# Build rule for target.
+part2_receiver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 part2_receiver
+.PHONY : part2_receiver
+
+# fast build rule for target.
+part2_receiver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/build
+.PHONY : part2_receiver/fast
+
+#=============================================================================
+# Target rules for targets named part2_sender
+
+# Build rule for target.
+part2_sender: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 part2_sender
+.PHONY : part2_sender
+
+# fast build rule for target.
+part2_sender/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/build
+.PHONY : part2_sender/fast
+
 part1.o: part1.c.o
 .PHONY : part1.o
 
@@ -190,6 +216,54 @@ part2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2.dir/build.make CMakeFiles/part2.dir/part2.c.s
 .PHONY : part2.c.s
 
+part2_receiver.o: part2_receiver.c.o
+.PHONY : part2_receiver.o
+
+# target to build an object file
+part2_receiver.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/part2_receiver.c.o
+.PHONY : part2_receiver.c.o
+
+part2_receiver.i: part2_receiver.c.i
+.PHONY : part2_receiver.i
+
+# target to preprocess a source file
+part2_receiver.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/part2_receiver.c.i
+.PHONY : part2_receiver.c.i
+
+part2_receiver.s: part2_receiver.c.s
+.PHONY : part2_receiver.s
+
+# target to generate assembly for a file
+part2_receiver.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_receiver.dir/build.make CMakeFiles/part2_receiver.dir/part2_receiver.c.s
+.PHONY : part2_receiver.c.s
+
+part2_sender.o: part2_sender.c.o
+.PHONY : part2_sender.o
+
+# target to build an object file
+part2_sender.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/part2_sender.c.o
+.PHONY : part2_sender.c.o
+
+part2_sender.i: part2_sender.c.i
+.PHONY : part2_sender.i
+
+# target to preprocess a source file
+part2_sender.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/part2_sender.c.i
+.PHONY : part2_sender.c.i
+
+part2_sender.s: part2_sender.c.s
+.PHONY : part2_sender.s
+
+# target to generate assembly for a file
+part2_sender.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/part2_sender.dir/build.make CMakeFiles/part2_sender.dir/part2_sender.c.s
+.PHONY : part2_sender.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,12 +274,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... part1"
 	@echo "... part2"
+	@echo "... part2_receiver"
+	@echo "... part2_sender"
 	@echo "... part1.o"
 	@echo "... part1.i"
 	@echo "... part1.s"
 	@echo "... part2.o"
 	@echo "... part2.i"
 	@echo "... part2.s"
+	@echo "... part2_receiver.o"
+	@echo "... part2_receiver.i"
+	@echo "... part2_receiver.s"
+	@echo "... part2_sender.o"
+	@echo "... part2_sender.i"
+	@echo "... part2_sender.s"
 .PHONY : help
 
 

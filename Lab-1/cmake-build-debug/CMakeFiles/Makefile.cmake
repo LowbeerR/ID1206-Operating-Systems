@@ -44,4 +44,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/part1.dir/DependInfo.cmake"
   "CMakeFiles/part2.dir/DependInfo.cmake"
+  "CMakeFiles/part2_receiver.dir/DependInfo.cmake"
+  "CMakeFiles/part2_sender.dir/DependInfo.cmake"
   )
