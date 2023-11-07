@@ -50,3 +50,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Lab-1/cmake-build-debug/CMakeFiles/Lab_1.dir/link.txt
+*.xml
+*.json
+*.json
+*.json
