@@ -5,19 +5,6 @@
 int buffer = 0;
 pthread_mutex_t lock;
 
-void increment(void) {
-    pthread_mutex_lock(&lock);
-    buffer++;
-    pthread_mutex_unlock(&lock);
-}
-
-int readBuffer(void) {
-    pthread_mutex_lock(&lock);
-    int ret = buffer;
-    pthread_mutex_unlock(&lock);
-    return ret;
-}
-
 void *thread_func(void *param) {
 
     while (buffer < 15) {
