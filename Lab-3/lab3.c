@@ -9,7 +9,6 @@ int physadr;
 int pageFault = 0;
 float TLBHit = 0.0;
 bool hit;
-signed char *allo;
 
 //TLB STRUCURE (queue / map ish),
 struct scuffedMAP {
@@ -22,8 +21,7 @@ int main(int argc, char *text[]) {
     if(argc != 2){
         return 1;
     }
-
-    allo = malloc(65536);
+    
     FILE *file = fopen(text[1], "r");
     int t[1000];
     int tmp = 0;
