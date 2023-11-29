@@ -21,7 +21,7 @@ int main(int argc, char *text[]) {
     if(argc != 2){
         return 1;
     }
-    
+
     FILE *file = fopen(text[1], "r");
     int t[1000];
     int tmp = 0;
