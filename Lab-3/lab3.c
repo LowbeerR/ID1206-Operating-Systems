@@ -7,10 +7,8 @@ int offsetMask = 0x00FF;
 int frameNumber;
 int physadr;
 int pageFault = 0;
-int total = 0;
-int TLBHit = 0;
+float TLBHit = 0.0;
 bool hit;
-
 signed char *allo;
 
 //TLB STRUCURE (queue / map ish),
@@ -38,7 +36,8 @@ int main(int argc, char *text[]) {
 
     //create bogus page table, if init to -1 = bad number
     for (int i = 0; i < 256; i++)
-        pageTable[i] = i;
+        pageTable[i] = -1;
+    //pageTable[i] = i*256;
 
     struct scuffedMAP scuffedMap;
     scuffedMap.index = 0;
@@ -46,37 +45,53 @@ int main(int argc, char *text[]) {
         scuffedMap.hash[i] = -1;
         scuffedMap.toPhys[i] = -1;
     }
-
     //page number: 255  Offset number: 254
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 1000; i++) {
         int maskedInitVal = t[i] & 0xffff;
         hit = false;
         physadr = 0x0000;
         int page = (maskedInitVal & pageNumberMask) >> 8;
         int offset = maskedInitVal & offsetMask;
-
-
         //Look in the TLB for hits
         for (int j = 0; j < 16; j++) {
             if (scuffedMap.hash[j] == page && !hit) {
                 physadr = scuffedMap.toPhys[j] << 8;
                 physadr = physadr | offset;
                 hit = true;
+                TLBHit++;
             }
         }
         //If not in TLB look in pageTable and update TLB
         if (!hit) {
             //Look in pageTable
+            if(pageTable[page] == -1){
+                pageFault++;
+                pageTable[page] = page*256;
+            }
             frameNumber = pageTable[page]; // blir 5
-            physadr = physadr | (frameNumber << 8);
-            physadr = physadr | offset;
+            physadr = frameNumber | offset;
+
             //Update TLB, queue is made with modulus calculations.
             scuffedMap.hash[scuffedMap.index % 16] = page;
             scuffedMap.toPhys[scuffedMap.index++ % 16] = frameNumber;
         }
-        printf("Logical address: %d, Page: %d, Offset: %d, Physical address: %d, Value: %d\n", maskedInitVal, page, offset, physadr,*(allo + physadr));
-    }
 
-    //printf("Hello, World!%d\n", t[2]);
+        FILE *bs;
+        char read[256];
+        bs = fopen("BACKING_STORE.bin", "r");
+        if (bs == NULL) {
+            perror("Error opening BACKING_STORE.bin");
+            return 1;
+        }
+        fseek(bs, physadr, SEEK_SET);
+        fread(read, 1, 256, bs);
+        fclose(bs);
+        int r = *(read);
+        printf("Logical address: %d, Physical address: %d, Value: %d\n",
+               maskedInitVal, physadr, r);
+    }
+    float hitrate = (TLBHit/ 1000.0);
+    printf("TBL hit rate: %f, Page faults: %d\n", hitrate, pageFault);
     return 0;
 }
+
