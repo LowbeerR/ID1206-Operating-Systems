@@ -1,0 +1,15 @@
+-ln file1.txt file2.txt
+    after this command the two files have the same inode value and contents.
+-edit file 2;
+    file 1 is also changed to the same content.
+-rm file 1
+    file 2 still exists.
+-strace rm file2.txt
+    system call = execve("/usr/bin/rm", ["rm", "file2.txt"], 0x7ffe75dbefb8 /* 55 vars */) = 0
+    (execve is the sys call)
+-ln -s file3.txt file4.txt
+    file3 inode=457442
+    file4 inode=457443
+    inode is different but the content is the same in the files.
+    Also after changing file 4, file 3 is changed to the same content.
+    After deleting file3 file 4 is also deleted because the link is broken.
