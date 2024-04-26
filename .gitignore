@@ -56,3 +56,5 @@ Lab-1/cmake-build-debug/CMakeFiles/Lab_1.dir/link.txt
 *.json
 *.json
 CMakeLists.txt
+/.idea
+/cmake-build-debug
