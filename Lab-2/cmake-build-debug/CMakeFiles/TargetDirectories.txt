@@ -1,3 +1,0 @@
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-2/cmake-build-debug/CMakeFiles/lab2_part1.dir
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

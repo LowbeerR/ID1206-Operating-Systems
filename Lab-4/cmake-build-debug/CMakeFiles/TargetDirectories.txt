@@ -1,4 +1,0 @@
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-4/cmake-build-debug/CMakeFiles/Lab_4.dir
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-4/cmake-build-debug/CMakeFiles/Lab_41.dir
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-4/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Rikard/Documents/GitHub/ID1206-Operating-Systems/Lab-4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
